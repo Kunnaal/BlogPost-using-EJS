@@ -12,3 +12,7 @@ Learning EJS by implementations of **_Templates & Layouts_** .
 
 Source of learning: Udemy.
 Link to course: [Udemy: The Complete Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
+
+## Updates:
+
+Now the data is stored on _MongoDB Atlas_ by the implementtion of _mongoose_.
