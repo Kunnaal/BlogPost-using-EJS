@@ -62,30 +62,25 @@ app.get('/posts/:id', function(req, res) {
       console.log(err);
     } else {
       if(foundPost) {
-        res.render("post", {postTitle: foundPost.postTitle, postData: foundPost.postBlog});
+        res.render("post", {postTitle: foundPost.postTitle, postData: foundPost.postBlog, ID: postId});
       } else {
         console.log(foundPost);
       }
     }
   });
+});
 
-  // Post.findById(req.params.id, function(err, foundPost){
-  //   console.log(foundPost.id);
-  //   if(err){
-  //     console.log(err);
-  //   } else {
-  //     if(foundPost){
-  //       if (foundPost.id === req.params.id){
-  //         res.render("post", {postTitle: foundPost.postTitle, postData: foundPost.postBlog});
-  //       } else {
-  //         console.log('Not Found!');
-  //         res.redirect('/');
-  //       }
-  //     } else {
-  //       console.log(foundPost);
-  //     }
-  //   }
-  // });
+app.get('/delete/:id', function(req, res){
+  Post.findByIdAndDelete(req.params.id, function(err, docs){
+    if(!err) {
+      console.log(docs);
+      setTimeout(function(){
+        res.redirect('/');
+      }, 200);
+    } else {
+      console.log(err);
+    }
+  });
 });
 
 app.post('/compose', function(req, res) {

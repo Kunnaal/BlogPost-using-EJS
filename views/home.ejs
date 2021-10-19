@@ -8,4 +8,8 @@
     <p><%= post.postBlog.substring(0, 99)+" ... " %> <a href="/posts/<%= post._id %>">Read more</a></p>
 <% }); %>  
 
+<div class="addButton">
+    <a href="/compose" style="color: black;"><button class="btn btn-primary btn-circle btn-xl"> + </button></a>
+</div>
+
 <%- include("partials/footer") %> 

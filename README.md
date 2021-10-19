@@ -15,4 +15,4 @@ Link to course: [Udemy: The Complete Web Development Bootcamp](https://www.udemy
 
 ## Updates:
 
-Now the data is stored on _MongoDB Atlas_ by the implementtion of _mongoose_.
+Now the data is stored on _MongoDB Atlas_ by the implementation of _mongoose_.
